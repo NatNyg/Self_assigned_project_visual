@@ -16,13 +16,14 @@ In order to reproduce my results, a few steps has to be followed:
 
 1) Install the relevant packages - the list of the prerequisites for the script can be found in the requirements.txt
 2) Make sure to place the script in the "src" folder. The data used in my code is fetched from https://www.kaggle.com/datasets/gpiosenka/good-guysbad-guys-image-data-set , wrangled and then put in the 'in' folder - so this folder can just be duplicated for reproducing. 
-3) Run the script from the terminal.
+3) Run the script from the terminal - make sure you are in the main folder when executing, so all you have to type is "python src/image_classification.py" 
 
-This should give you the same results as I have gotten in the "out" folder.
+This should give you approximately the same results as I have gotten in the "out" folder.
 
 ### Results 
-The results of this transfer learning solution to my classification task is actually really good - maybe even suspiciously so. This is something the author of the dataset also discusses in his entry on Kaggle, where he has tried to figure out just how the results are achieved by running the classification on individual images in order to trouble shoot / break down the process; "What bothers me is that the misclassification rate for individual images is significantly higher than one would expect based on the accuracy of he test set results. So something is going on but I don't know what. Thought it might be the emotion shown in the image but tests showed no clear correlation." (Gerry, https://www.kaggle.com/datasets/gpiosenka/good-guysbad-guys-image-data-set) 
-I myself get an accuracy score of around 95% which is quite good, but the result also puzzled me, and even more so after reading the creator of the dataset wondering about this. However, the result in itself is really good, and the history plotted shows also that the model is not 100% steady all the way through, but is also not completely over- nor underfitting on the data. 
+When fitting this model on the train and test data the results of this transfer learning solution to my classification task is actually really good - maybe even suspiciously so. This is something the author of the dataset also discusses in his entry on Kaggle, where he has tried to figure out just how the results are achieved by running the classification on individual images in order to trouble shoot / break down the process; "What bothers me is that the misclassification rate for individual images is significantly higher than one would expect based on the accuracy of he test set results. So something is going on but I don't know what. Thought it might be the emotion shown in the image but tests showed no clear correlation." (Gerry, https://www.kaggle.com/datasets/gpiosenka/good-guysbad-guys-image-data-set) 
+I myself got an accuracy score of around 95% which is quite good, but the result also puzzled me, and even more so after reading the creator of the dataset wondering about this. However, the result in itself is really good, and the history plotted shows also that the model is not 100% steady all the way through, but is also not completely over- nor underfitting on the data. 
+Looking at the classification report though, the results are not at all as good as I would have expected them to be after looking at the history - the predictions were only about 50%, which could explain the authour's tests shows that the misclasification for individual images are higher than expected. So as he says - not really sure what's going on, but something definetely is! 
 
 ### Credits
 For this project I have found inspiration in several pages, including:
