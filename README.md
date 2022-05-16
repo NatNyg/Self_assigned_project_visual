@@ -24,4 +24,9 @@ This should give you the same results as I have gotten in the "out" folder.
 The results of this transfer learning solution to my classification task is actually really good - maybe even suspiciously so. This is something the author of the dataset also discusses in his entry on Kaggle, where he has tried to figure out just how the results are achieved by running the classification on individual images in order to trouble shoot / break down the process; "What bothers me is that the misclassification rate for individual images is significantly higher than one would expect based on the accuracy of he test set results. So something is going on but I don't know what. Thought it might be the emotion shown in the image but tests showed no clear correlation." (Gerry, https://www.kaggle.com/datasets/gpiosenka/good-guysbad-guys-image-data-set) 
 I myself get an accuracy score of around 95% which is quite good, but the result also puzzled me, and even more so after reading the creator of the dataset wondering about this. However, the result in itself is really good, and the history plotted shows also that the model is not 100% steady all the way through, but is also not completely over- nor underfitting on the data. 
 
+### Credits
+For this project I have found inspiration in several pages, including:
+https://www.tensorflow.org/tutorials/load_data/images 
+https://stackoverflow.com/questions/64687375/get-labels-from-dataset-when-using-tensorflow-image-dataset-from-directory 
+
 
