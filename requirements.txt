@@ -1,0 +1,3 @@
+Required packages to install before running the script:
+
+scikit-learn, tensorflow, opencv
