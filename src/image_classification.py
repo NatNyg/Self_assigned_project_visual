@@ -117,7 +117,7 @@ This function firstly fits the just defined model and trains it on the trainingd
     H = model.fit(train_ds,
                   validation_data = (val_ds),
                   batch_size = 128,
-                  epochs = 1,
+                  epochs = 10,
                   verbose = 10) 
     plot_history(H,10)
     predictions = model.predict(val_ds, batch_size = 128)
