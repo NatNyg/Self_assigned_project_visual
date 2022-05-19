@@ -62,9 +62,8 @@ def load_data():
     """
 This function loads my data that is placed in the "in" folder. I am using the tensorflow keras image_dataset_from_directory in order to load my data as a train and validation datasets, since my folder consists of two subfolders; "good-guy" and "bad_guy", which is pre-labelled images divided into the two classes. Lastly I fetch the labels for each image in the training and validation dataset.  
     """
-    #defining a path to the directory of our data-folder that contains subfolders 
+    
     data_dir = os.path.join("in")
-    #function from tensorflow that takes the images from the subfolders in the given directory and transforms 
     train_ds = tf.keras.utils.image_dataset_from_directory(
         data_dir,
         validation_split=0.2,
@@ -91,18 +90,18 @@ This function defines the model I will be using for transfer learning (VGG16), t
                   input_shape = (256,256,3))
     for layer in model.layers:
         layer.trainable = False
-    #add new classifier layers
+    
     flat1 = Flatten()(model.layers[-1].output)
     class1 = Dense(128, activation='relu')(flat1)
     output = Dense(1, activation='sigmoid')(class1)
 
-    #define new model 
+    
     model = Model(inputs=model.inputs,
                   outputs=output)
     lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay(
         initial_learning_rate=0.01,
         decay_steps=10000,
-        decay_rate=0.9) #1 would be no change, so we want a small decrease here
+        decay_rate=0.9) 
 
     sgd =SGD(learning_rate=lr_schedule)
     model.compile(optimizer=sgd,
