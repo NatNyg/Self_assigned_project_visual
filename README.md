@@ -15,7 +15,7 @@ After this I was able to fetch the labels from the images and binarizing them, u
 In order to reproduce my results, a few steps has to be followed:
 
 1) Install the relevant packages - the list of the prerequisites for the script can be found in the requirements.txt
-2) Make sure to place the script in the "src" folder. The data used in my code is fetched from https://www.kaggle.com/datasets/gpiosenka/good-guysbad-guys-image-data-set , wrangled as described previously and then put in the'in' folder - so the 'in' folder has to be duplicated in order to reproduce the results. 
+2) Make sure to place the script in the "src" folder. The data used in my code is fetched from https://www.kaggle.com/datasets/gpiosenka/good-guysbad-guys-image-data-set , wrangled as described previously and then put in the'in' folder - so the 'in' folder has to be duplicated in order to reproduce the results (note that the in-folder is not upluaded here, but in the ZIP-file on digital exam, so the file has to be unzipped for use). 
 3) Run the script from the terminal - make sure you are in the main folder when executing, so all you have to type is "python src/image_classification.py" 
 
 This should give you approximately the same results as I have gotten in the "out" folder.
